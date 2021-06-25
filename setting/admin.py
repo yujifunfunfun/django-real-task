@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models.sample_form import *
+from .models.setting_table import *
+
+admin.site.register(SampleModel)
+admin.site.register(ItemData)
