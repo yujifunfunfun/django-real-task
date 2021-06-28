@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    <textarea name="url_list" id="url_list" cols="30" rows="10"></textarea>
+    <button type="submit">URLを検索</button>
+  </form>
+{% endblock %}

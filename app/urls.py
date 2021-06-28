@@ -27,6 +27,7 @@ urlpatterns = [
     path('setting/', include("setting.urls")),
     path('mypage/', include("mypage.urls")),
     path('users/', include("users.urls")),
+    path('url/',include("setting.urls")),
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

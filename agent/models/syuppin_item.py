@@ -8,6 +8,7 @@ from sqlalchemy.sql.type_api import STRINGTYPE
 from sqlalchemy_utils import UUIDType
 from pytz import timezone
 import ulid
+from common.database import Base, get_ulid, session
 
 
 
