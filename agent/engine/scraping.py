@@ -2,7 +2,6 @@ import urllib.request
 import bs4
 from agent.models.searched_item import *
 
-
 class ScrapingMercari():
     def scraping_mercari(self,url_data):
         ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) '\
@@ -14,8 +13,8 @@ class ScrapingMercari():
         bs = bs4.BeautifulSoup(html, "html.parser")
         item_name = bs.select_one("h1")
         price = bs.select_one(".item-price")
-        seller = bs.select('.item-detail-table > tbody > tr:nth-of-type(1) > td > a')
-        image_url = bs.select('.owl-lazy').get('src')
+        seller = bs.select_one('.item-detail-table a')
+        image_url = bs.select_one('.owl-lazy').get('data-src')
         url = url_data
         item_id = url_data
         site = 'メルカリ'

@@ -7,8 +7,6 @@ class Scrapinng(generic.TemplateView):
     template_name = 'setting/url.html'
 
 
- 
-
     def post(self,request):
         url = self.request.POST.get('url_list')
         url_list = url.split('\n')
@@ -18,9 +16,11 @@ class Scrapinng(generic.TemplateView):
             u = UrlList(url_list=i)
             u.save()
         
-        urls = UrlList.objects.all()
+        urls = UrlList.objects.values_list('url_list')
 
         for j in urls:
-            s = Manage()
-            s.add_db(j)
+            m = Manage()
+            m.add_db(j)
+         
+        
         
