@@ -18,6 +18,6 @@ class ScrapingMercari():
         url = url_data
         item_id = url_data
         site = 'メルカリ'
-        return SearchedItem(item_name=item_name.text,price=int(price),sella_name=seller.text,image_urls=image_url,url=url,item_id=item_id,site=site)
+        return SearchedItem(item_name=item_name.text,item_id=item_id,image_urls=image_url,seller_name=seller.text,site=site,url=url,price=price.text)
 
 

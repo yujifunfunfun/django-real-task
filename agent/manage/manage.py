@@ -13,7 +13,6 @@ def add_db():
     s = ScrapingMercari()
     db = SessionLocal()
 
-    # urls = UrlList.objects.values_list('url_list')
     urls = db.query(UrlList).all()
 
     for url in urls:

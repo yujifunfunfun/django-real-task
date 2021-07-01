@@ -1,12 +1,14 @@
 import django_tables2 as tables
 from django_tables2.utils import Accessor
 from ..models.setting_table import *
+from ..models.syuppin_item import *
+
 
 class ItemTable(tables.Table):
     
     class Meta:
-        model = ItemData
+        model = SyuppinItem
         template_name = 'django_tables2/bootstrap4.html'
         orderable = False
         
-        fields = ('account_name','item_name','price','item_id','image1','image2','image3','image4','auction') 
+        fields = ('item_name','price','seller_name','image_url1','url','site') 

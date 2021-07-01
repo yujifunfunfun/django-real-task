@@ -15,3 +15,4 @@ class ItemData(models.Model):
     image3 = models.ImageField(upload_to='')
     image4 = models.ImageField(upload_to='')
     auction = models.CharField(max_length=10,default="メルカリ",verbose_name="メルカリ/ラクマ選択",choices=AUCTION)
+

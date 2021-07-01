@@ -19,5 +19,9 @@
                 </table>
             </div>
         </div>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">ファイルダウンロード</button>
+        </form>
     </body>
 </html>
